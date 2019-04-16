@@ -17,19 +17,6 @@ const Loading = () => {
           viewBox="-20 -30 70 70"
           preserveAspectRatio="xMinYMin meet"
         >
-          <text
-            style={{
-              x: "50",
-              y: "50",
-              fontFamily: "'Montserrat', sans-serif",
-              fontSize: "2px",
-              style: "letter-spacing:0.6",
-              fill: "black"
-            }}
-          >
-            Učitavanje..
-            <animate values="0;1;0" dur="2s" repeatCount="indefinite" />
-          </text>
           <path
             fill="#373a42"
             d="M20,35c-8.271,0-15-6.729-15-15S11.729,5,20,5s15,6.729,15,15S28.271,35,20,35z M20,5.203

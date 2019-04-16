@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { Field, reduxForm, reset } from "redux-form";
+import { reduxForm, reset } from "redux-form";
 import { saveComment } from "../Actions/PostActions";
-import { required } from "../Helpers/ReduxFormValidation";
 
 class AddComment extends Component {
   constructor(props) {
@@ -12,22 +11,12 @@ class AddComment extends Component {
       username: localStorage.getItem("username") || ""
     };
   }
-  // username: localStorage.getItem("username") || ""
+
   getUsername(username) {
     localStorage.getItem("username", username);
     console.log(localStorage.username);
     return this.state.username;
   }
-  /*
-    console.log(this.props.uid);
-    var obj = new App();
-    var username = obj.getUsername();
-    console.log(username);
-    */
-  /*var mail = this.user.email;
-    var username = mail.substring(0, mail.indexOf("@"));
-    console.log(username);
-    return username;}*/
 
   onChange = event => {
     const username = event.target.value;
@@ -83,7 +72,7 @@ class AddComment extends Component {
   render() {
     console.log(this.props.uid);
     console.log(this.state.username);
-    const { handleSubmit, classes } = this.props;
+    const { handleSubmit } = this.props;
     return (
       <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
         {" "}

@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import img4 from "../image/amater.jpg";
 import img7 from "../image/d3500.png";
@@ -25,9 +23,11 @@ const styles = theme => ({
     marginBottom: "1%"
   },
   top: {
+    backgroundColor: "rgba(212, 211, 211, 0.747)",
     fontSize: 25,
     textTransform: "uppercase",
-    marginTop: "-40%",
+    marginTop: "-55%",
+    width: "60%",
     marginLeft: "1%",
     fontWeight: "bold",
     textAlign: "center",
@@ -35,7 +35,7 @@ const styles = theme => ({
     border: "2px solid black",
     padding: "2%",
     fontFamily: " 'Lato', light 300 ",
-    position: "absolute"
+    position: "relative"
   },
   ima: {
     opacity: 0.9,
@@ -69,10 +69,6 @@ const styles = theme => ({
 });
 
 class Amater extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { classes } = this.props;
     return (
@@ -86,7 +82,7 @@ class Amater extends Component {
                   <h3 className={classes.top}>
                     Tebi odgovara <br /> početnički DSLR!
                   </h3>
-                  <p className={classes.tag1}>
+                  <p className={classes.tag}>
                     Photo by Tom Pumford on Unsplash
                   </p>
                 </Card>

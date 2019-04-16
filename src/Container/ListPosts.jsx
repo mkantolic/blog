@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { getPosts, savePost, deletePost } from "../Actions/PostActions";
-import { Field, reduxForm, reset } from "redux-form";
+import { reduxForm } from "redux-form";
 import _ from "lodash";
 import { getUser, logout } from "../Actions/UserActions";
-import { NavLink, Link } from "react-router-dom";
-import { required } from "../Helpers/ReduxFormValidation";
+import { Link } from "react-router-dom";
 import Navbar from "../Layout/Navbar";
 import CreateProject from "./CreateProject";
-import { withStyles, createStyles } from "@material-ui/core/styles";
+import { withStyles } from "@material-ui/core/styles";
 import CardMedia from "@material-ui/core/CardMedia";
 import renderHTML from "react-render-html";
 import compose from "recompose/compose";
@@ -201,10 +200,10 @@ class App extends Component {
   renderUser() {
     console.log(this.props.username);
   }
+  /*  var newTime = post.time,
+        formatTime = new Date(newTime).toLocaleString();*/
   renderPosts() {
     return _.map(this.props.posts, (post, key) => {
-      var newTime = post.time,
-        formatTime = new Date(newTime).toLocaleString();
       return (
         <Link to={`/${key}`}>
           <div className="tile">
@@ -218,7 +217,6 @@ class App extends Component {
                 </p>
                 <p className="animate-text">
                   <span>Autor: {post.signature}</span> <br />
-                  <span>Kreirano: {formatTime}</span>
                 </p>
               </div>
             </CardMedia>
@@ -248,7 +246,7 @@ class App extends Component {
   };
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes } = this.props;
     return (
       <div>
         <Navbar />
@@ -511,49 +509,3 @@ export default compose(
       </div>
     );
   } */
-/*
-<div
-          className={`collapsible ${this.state.current === 0 ? "open " : ""}`}
-        >
-          <div className="row">
-            <div className="col-10 right">{this.renderPosts().reverse()}</div>
-          </div>
-        </div>
-
-        <div
-          className={`collapsible ${this.state.current === 2 ? "open " : ""}`}
-        >
-          <QuizHome />
-        </div>
-
-        <div
-          className={`collapsible ${this.state.current === 3 ? "open " : ""}`}
-        >
-          <CreateProject />
-        </div>
-        */
-/*
-  <Tabs centered>
-            <Tooltip title={longText}>
-              <Tab
-                className="menu-bar"
-                label="Početna"
-                onClick={this.toggle.bind(this, 0)}
-              />
-            </Tooltip>
-            <Tooltip title={longText2}>
-              <Tab
-                className="menu-bar"
-                label="Quiz"
-                onClick={this.toggle.bind(this, 2)}
-              />
-            </Tooltip>
-            <Tooltip title={longText3}>
-              <Tab
-                className="menu-bar"
-                label="Kreiraj članak"
-                onClick={this.toggle.bind(this, 3)}
-              />
-            </Tooltip>
-          </Tabs>
-          */

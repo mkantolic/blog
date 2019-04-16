@@ -23,17 +23,19 @@ const styles = theme => ({
     marginBottom: "1%"
   },
   top: {
+    backgroundColor: "rgba(212, 211, 211, 0.747)",
     fontSize: 25,
     textTransform: "uppercase",
-    marginTop: "-35%",
+    marginTop: "-50%",
+    width: "50%",
     marginLeft: "1%",
     fontWeight: "bold",
     textAlign: "center",
-    color: "#d5d4d6",
-    border: "2px solid #d5d4d6",
+    color: "black",
+    border: "2px solid black",
     padding: "2%",
     fontFamily: " 'Lato', light 300 ",
-    position: "absolute"
+    position: "relative"
   },
   ima: {
     opacity: 0.9,
@@ -80,7 +82,7 @@ class Profesionalac extends Component {
                   <h3 className={classes.top}>
                     Tebi odgovara <br /> profesionalni DSLR!
                   </h3>
-                  <p className={classes.tag1}>
+                  <p className={classes.tag}>
                     Photo by Jeff Hopper on Unsplash
                   </p>
                 </Card>

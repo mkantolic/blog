@@ -1,15 +1,9 @@
 import React, { Component } from "react";
-import { getPosts, savePost, deletePost } from "../Actions/PostActions";
-import { Field, reduxForm, reset } from "redux-form";
-import compose from "recompose/compose";
 import { getUser, logout } from "../Actions/UserActions";
 import { connect } from "react-redux";
 import quizQuestions from "./quizQuestions";
 import Quiz from "./Quiz";
 import Result from "./Result";
-import Navbar from "../Layout/Navbar";
-import { NavLink, Link } from "react-router-dom";
-import Fab from "@material-ui/core/Fab";
 import Button from "@material-ui/core/Button";
 import "../Layout/Navbar.css";
 import PropTypes from "prop-types";
@@ -26,7 +20,7 @@ const styles = theme => ({
     ...theme.mixins.gutters(),
     paddingTop: theme.spacing.unit * 2,
     paddingBottom: theme.spacing.unit * 2,
-    width: "65%",
+    width: "70%",
     marginLeft: "10%",
     marginTop: "1%",
     backgroundColor: "#f8f6f7",
@@ -74,7 +68,6 @@ class QuizHome extends Component {
     super(props);
 
     this.state = {
-      anchorEl: null,
       counter: 0,
       questionId: 1,
       question: "",
@@ -222,14 +215,6 @@ class QuizHome extends Component {
     }
     return <Result quizResult={this.state.result} />;
   }
-
-  handleClick = event => {
-    this.setState({ anchorEl: event.currentTarget });
-  };
-
-  handleClose = () => {
-    this.setState({ anchorEl: null });
-  };
   reloadPage() {
     window.location.reload();
   }
@@ -237,7 +222,6 @@ class QuizHome extends Component {
     const { user } = this.props;
     if (!user.uid) return <Redirect to="/Login" />;
     const { classes } = this.props;
-    const { anchorEl } = this.state;
     return (
       <div className="App">
         <Paper className={classes.root} elevation={1}>

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { getUser, logout } from "../Actions/UserActions";
 import { withStyles } from "@material-ui/core/styles";
@@ -7,7 +7,6 @@ import { getPosts, savePost, deletePost } from "../Actions/PostActions";
 import compose from "recompose/compose";
 import { connect } from "react-redux";
 import "./Navbar.css";
-import DSLR from "../Container/DSLR";
 
 const styles = {
   root: {
@@ -70,18 +69,6 @@ const styles = {
 };
 
 class NavbarPage extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      current: 0
-    };
-  }
-  toggle(index) {
-    this.setState({
-      current: index
-    });
-  }
   getUsername() {
     console.log(this.props.user.uid);
     console.log(this.props.user.email);

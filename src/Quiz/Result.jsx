@@ -16,15 +16,17 @@ const styles = theme => ({
   top: {
     fontSize: 15,
     textTransform: "uppercase",
-    marginTop: "-20%",
-    marginLeft: "25%",
+    marginTop: "-35%",
+    marginLeft: "45%",
     fontWeight: "bold",
     textAlign: "center",
     color: "black",
     border: "2px solid black",
     padding: "2%",
     fontFamily: " 'Lato', light 300 ",
-    position: "absolute"
+    backgroundColor: "rgba(212, 211, 211, 0.747)",
+    width: "60%",
+    position: "relative"
   },
   ima: {
     width: "60%",
@@ -58,10 +60,6 @@ const styles = theme => ({
 });
 
 class Result extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { classes } = this.props;
     return (

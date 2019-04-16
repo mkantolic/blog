@@ -19,13 +19,15 @@ const styles = theme => ({
   },
   div: {
     width: "100%",
-    height: "20em",
+    height: "24em",
     marginBottom: "1%"
   },
   top: {
+    backgroundColor: "rgba(212, 211, 211, 0.747)",
     fontSize: 25,
     textTransform: "uppercase",
-    marginTop: "-35%",
+    marginTop: "-62%",
+    width: "70%",
     marginLeft: "1%",
     fontWeight: "bold",
     textAlign: "center",
@@ -33,7 +35,7 @@ const styles = theme => ({
     border: "2px solid black",
     padding: "2%",
     fontFamily: " 'Lato', light 300 ",
-    position: "absolute"
+    position: "relative"
   },
   ima: {
     opacity: 0.9,
@@ -80,7 +82,7 @@ class Kompaktni extends Component {
                   <h3 className={classes.top}>
                     Tebi odgovara <br /> kompaktni fotoaparat!
                   </h3>
-                  <p className={classes.tag1}>
+                  <p className={classes.tag}>
                     Photo by Malte Wingen on Unsplash
                   </p>
                 </Card>

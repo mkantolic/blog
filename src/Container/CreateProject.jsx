@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { withStyles } from "@material-ui/core/styles";
 import "../Layout/Navbar.css";
 import TextField from "@material-ui/core/TextField";
-import { reset } from "redux-form";
 import compose from "recompose/compose";
 import { connect } from "react-redux";
 import { getPosts, savePost, deletePost } from "../Actions/PostActions";
@@ -259,7 +258,6 @@ class CreateProject extends Component {
                 shrink: true
               }}
               fullWidth
-              name="title"
               label="Upiši naslov"
               value={this.state.title}
               onChange={values => {

@@ -64,7 +64,7 @@ class PostDetail extends Component {
   }
 
   render() {
-    const { classes, post, history, match, deletePost, user } = this.props;
+    const { post, history, match, deletePost, user } = this.props;
 
     if (!post) return null;
     var newTime = post.time,
@@ -75,7 +75,7 @@ class PostDetail extends Component {
         <Navbar />
         <div className="container-fluid">
           <div className="row">
-            <div className="col-lg-4 col-md-6 col-sm-12">
+            <div className="col-lg-8 col-md-6 col-sm-12">
               <div className="card">{renderHTML(post.naslovna)}</div>
               <Typography className="col-lg-4 col-md-6 col-sm-12">
                 <h1 className="post-title">{post.title}</h1>

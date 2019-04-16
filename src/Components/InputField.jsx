@@ -108,9 +108,6 @@ const styles = theme => ({
     color: "rgb(83, 53, 88)"
   }
 });
-function isVowel(char) {
-  return /^[aeiou]$/.test(char.toLowerCase());
-}
 const InputField = props => {
   const { classes } = props;
   return (
@@ -139,7 +136,6 @@ const InputField = props => {
         id={props.id}
         className="form-control"
         placeholder={`   ${props.label}...`}
-        style={props.style}
       />
     </div>
   );
