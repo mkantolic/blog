@@ -315,7 +315,7 @@ class CreateProject extends Component {
               {" "}
               <ReactQuill
                 name="quill"
-                placeholder="Učitajte sliku za naslovnu"
+                placeholder="Učitajte sliku za naslovnu, koristite CTRL+V kako biste samo kopirali sliku sa interneta, ili ju samo dovucite iz Vaše datoteke."
                 value={this.state.naslovna}
                 modules={CreateProject.modulesNaslovna}
                 formats={CreateProject.formatsNaslovna}
@@ -326,7 +326,7 @@ class CreateProject extends Component {
             <br />
             <ReactQuill
               name="quill"
-              placeholder="Sadržaj Vašeg članka (koristite slike manjeg formata)"
+              placeholder="Sadržaj Vašeg članka (koristite slike manjeg formata), koristite CTRL+V kako biste samo kopirali sliku sa interneta, ili ju samo dovucite iz Vaše datoteke."
               value={this.state.quill}
               modules={CreateProject.modules}
               formats={CreateProject.formats}

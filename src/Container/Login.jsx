@@ -154,7 +154,6 @@ class Login extends Component {
   render() {
     return (
       <div>
-        <Home />
         <div>{this.renderBody()}</div>{" "}
       </div>
     );
